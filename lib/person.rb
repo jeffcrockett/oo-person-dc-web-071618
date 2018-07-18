@@ -3,6 +3,10 @@ class Person
   attr_accessor :name, :bank_account, :happiness, :hygiene
 
   def initialize(name, bank_account = 25, happiness = 8, hygiene = 8)
+    @name = name
+    @bank_account = bank_account
+    @happiness = happiness
+    @hygiene = hygiene 
   end
 
   def clean?
@@ -23,6 +27,11 @@ class Person
     self.hygiene -= 3
     "♪ another one bites the dust ♫"
   end
+
+  def call_friend(friend)
+    self.happiness += 3
+    friend.happiness += 3
+    "Hi #{friend.name}. It's #{self.name}. How are you?"
 
   def start_conversation(person, topic)
     if topic == 'politics'
