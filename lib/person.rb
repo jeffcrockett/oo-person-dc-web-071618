@@ -24,6 +24,8 @@ class Person
       @happiness = 10
     elsif value < 0
       @happiness = 0
+    else
+      @happiness = value 
     end
   end
 
@@ -32,6 +34,8 @@ class Person
       @hygiene = 10
     elsif value < 0
       @hygiene = 0
+    else
+      @hygiene = value
     end
   end
 
@@ -56,7 +60,7 @@ class Person
     @bank_account += amount
     "all about the benjamins"
   end
-  
+
   def start_conversation(person, topic)
     if topic == 'politics'
       self.happiness -= 1
