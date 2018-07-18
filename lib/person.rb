@@ -52,6 +52,10 @@ class Person
     "Hi #{friend.name}. It's #{self.name}. How are you?"
   end
 
+  def get_paid(amount)
+    @bank_account += amount
+    "all about the benjamins"
+  end
   def start_conversation(person, topic)
     if topic == 'politics'
       self.happiness -= 1 unless self.happiness == 0
