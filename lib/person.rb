@@ -1,7 +1,8 @@
 # your code goes here
 class Person
-  attr_accessor :bank_account, :happiness, :hygiene
-  attr_reader :name
+  attr_accessor :bank_account
+  
+  attr_reader :name, :happiness, :hygiene 
 
   def initialize(name, bank_account = 25, happiness = 8, hygiene = 8)
     @name = name
@@ -16,6 +17,22 @@ class Person
 
   def happy?
     self.happiness > 7 ? true : false
+  end
+
+  def happiness=(value)
+    if value > 10 
+      @happiness = 10 
+    elsif value < 0 
+      @happiness = 0
+    end
+  end
+
+  def hygiene=(value)
+    if value > 10 
+      @hygiene = 10 
+    elsif value < 0 
+      @hygiene = 0
+    end
   end
 
   def take_bath
