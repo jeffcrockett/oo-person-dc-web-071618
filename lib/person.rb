@@ -1,13 +1,13 @@
 # your code goes here
 class Person
   attr_accessor :bank_account, :happiness, :hygiene
-  attr_reader :name 
+  attr_reader :name
 
   def initialize(name, bank_account = 25, happiness = 8, hygiene = 8)
     @name = name
     @bank_account = bank_account
-    @happiness = happiness
-    @hygiene = hygiene
+    happiness <= 10 ? @happiness = happiness : @happiness = 10
+    hygiene <= 10 ? @hygiene = hygiene : @hygiene = 10
   end
 
   def clean?
