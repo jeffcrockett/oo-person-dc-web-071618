@@ -22,6 +22,7 @@ class Person
     self.happiness += 2
     self.hygiene -= 3
     "♪ another one bites the dust ♫"
+  end
 
   def start_conversation(person, topic)
     # if topic == 'politics'
