@@ -25,7 +25,7 @@ class Person
     elsif value < 0
       @happiness = 0
     else
-      @happiness = value 
+      @happiness = value
     end
   end
 
